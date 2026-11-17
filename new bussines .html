@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पहाड़ी ऑर्गेनिक्स - शुद्ध देसी उत्पाद</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f2; color: #2c3e26; }
+        header { background-color: #2e6f40; color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 26px; margin-bottom: 5px; }
+        header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); text-align: center; }
+        .card-icon { font-size: 50px; margin: 10px 0; }
+        .card h3 { font-size: 18px; margin-bottom: 8px; color: #1e4d2b; }
+        .card p { font-size: 13px; color: #555; margin-bottom: 12px; min-height: 36px; }
+        .price { font-size: 18px; font-weight: bold; color: #2e6f40; margin-bottom: 12px; }
+        button { background-color: #2e6f40; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 15px; width: 100%; }
+        button:hover { background-color: #235631; }
+        .cart-section { background: white; margin-top: 30px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); }
+        .cart-section h2 { margin-bottom: 15px; border-bottom: 2px solid #e0e8dc; padding-bottom: 8px; }
+        .cart-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+        .total { font-size: 18px; font-weight: bold; margin: 15px 0; text-align: right; }
+        .form-group { margin-bottom: 12px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .whatsapp-btn { background-color: #25D366; font-weight: bold; font-size: 16px; margin-top: 10px; }
+        .whatsapp-btn:hover { background-color: #1ebe57; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌿 शुद्ध पहाड़ी ऑर्गेनिक्स</h1>
+    <p>100% प्राकृतिक राख, अदरक के पत्ते, पहाड़ी खट्टे और देसी गाय के उपले</p>
+</header>
+
+<div class="container">
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="card">
+            <div class="card-icon">🪵</div>
+            <h3>शुद्ध लकड़ी की राख (Wood Ash - 1 Kg)</h3>
+            <p>बर्तन साफ़ करने, पूजा और पौधों के लिए प्राकृतिक पोटैशियम युक्त राख।</p>
+            <div class="price">₹60</div>
+            <button onclick="addToCart('लकड़ी की राख (1 Kg)', 60)">कार्ट में जोड़ें</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+            <div class="card-icon">🌱</div>
+            <h3>ताज़े अदरक के पत्ते (Ginger Leaves - 250g)</h3>
+            <p>ऑर्गेनिक चाय, काढ़ा और खुशबूदार व्यंजनों के लिए ताज़े पत्ते।</p>
+            <div class="price">₹80</div>
+            <button onclick="addToCart('अदरक के पत्ते (250g)', 80)">कार्ट में जोड़ें</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card">
+            <div class="card-icon">🍋</div>
+            <h3>ताज़े पहाड़ी खट्टे / गलगल (1 Kg)</h3>
+            <p>बिना केमिकल के उगाए गए रसदार खट्टे, अचार और खटाई के लिए उत्तम।</p>
+            <div class="price">₹90</div>
+            <button onclick="addToCart('पहाड़ी खट्टे (1 Kg)', 90)">कार्ट में जोड़ें</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>देसी गाय के उपले (10 पीस पैक)</h3>
+            <p>हवन, पूजा और पारंपरिक चूल्हे के लिए धूप में सुखाए गए शुद्ध उपले।</p>
+            <div class="price">₹120</div>
+            <button onclick="addToCart('देसी गाय के उपले (10 पीस)', 120)">कार्ट में जोड़ें</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="card">
+            <div class="card-icon">🌾</div>
+            <h3>गाय के गोबर की जैविक खाद (2 Kg)</h3>
+            <p>गमलों और किचन गार्डन के पौधों के लिए पूरी तरह सड़ी हुई शुद्ध खाद।</p>
+            <div class="price">₹100</div>
+            <button onclick="addToCart('जैविक गोबर खाद (2 Kg)', 100)">कार्ट में जोड़ें</button>
+        </div>
+    </div>
+
+    <!-- Cart & Order Form -->
+    <div class="cart-section">
+        <h2>🛒 आपका ऑर्डर (Your Cart)</h2>
+        <div id="cart-items">अभी कार्ट खाली है। ऊपर से सामान चुनें।</div>
+        <div class="total" id="total-price">कुल राशि: ₹0</div>
+
+        <div class="form-group">
+            <input type="text" id="cust-name" placeholder="आपका पूरा नाम (Name)" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" id="cust-phone" placeholder="मोबाइल नंबर (Phone Number)" required>
+        </div>
+        <div class="form-group">
+            <textarea id="cust-address" rows="3" placeholder="पूरा पता और पिनकोड (Delivery Address)" required></textarea>
+        </div>
+        <button class="whatsapp-btn" onclick="orderOnWhatsApp()">📲 WhatsApp पर ऑर्डर भेजें</button>
+    </div>
+</div>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(name, price) {
+        cart.push({ name, price });
+        total += price;
+        updateCartUI();
+    }
+
+    function updateCartUI() {
+        const cartDiv = document.getElementById('cart-items');
+        if (cart.length === 0) {
+            cartDiv.innerHTML = 'अभी कार्ट खाली है।';
+            return;
+        }
+        cartDiv.innerHTML = cart.map((item, index) => 
+            `<div class="cart-item">
+                <span>${item.name}</span>
+                <span>₹${item.price} <a href="#" onclick="removeItem(${index}); return false;" style="color:red; margin-left:10px;">[हटाएं]</a></span>
+            </div>`
+        ).join('');
+        document.getElementById('total-price').innerText = 'कुल राशि: ₹' + total;
+    }
+
+    function removeItem(index) {
+        total -= cart[index].price;
+        cart.splice(index, 1);
+        updateCartUI();
+    }
+
+    function orderOnWhatsApp() {
+        if (cart.length === 0) {
+            alert('कृपया पहले कार्ट में कोई सामान जोड़ें!');
+            return;
+        }
+        const name = document.getElementById('cust-name').value;
+        const phone = document.getElementById('cust-phone').value;
+        const address = document.getElementById('cust-address').value;
+
+        if (!name || !phone || !address) {
+            alert('कृपया अपना नाम, नंबर और पूरा पता भरें!');
+            return;
+        }
+
+        // यहाँ अपना 10 अंकों का WhatsApp नंबर डालें (91 के साथ, जैसे 919876543210)
+        const yourWhatsAppNumber = "919876543210"; 
+
+        let itemsList = cart.map(i => `- ${i.name}: ₹${i.price}`).join('%0A');
+        let message = `*नया ऑर्डर आया है!* 🌿%0A%0A*ग्राहक का नाम:* ${name}%0A*फ़ोन:* ${phone}%0A*पता:* ${address}%0A%0A*ऑर्डर किए गए सामान:*%0A${itemsList}%0A%0A*कुल राशि:* ₹${total}`;
+
+        window.open(`https://wa.me{9968114340}?text=${message}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
